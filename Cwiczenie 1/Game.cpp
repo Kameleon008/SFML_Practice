@@ -5,7 +5,15 @@ Game::Game()
 	, mPlayer()
 	, mTexture()
 {
-	if (!mTexture.loadFromFile("Media/Textures/Eagle.png"))
+	if (!mTexture.loadFromFile("Media/Textures/eagle.png"))
+	{
+
+	}
+	if (!mTextureLeft.loadFromFile("Media/Textures/eagle_left.png"))
+	{
+
+	}
+	if (!mTextureRight.loadFromFile("Media/Textures/eagle_right.png"))
 	{
 
 	}
@@ -28,8 +36,7 @@ void Game::run()
 		processEvents();
 		timeSiceLastUpdate += clock.restart();
 		if (timeSiceLastUpdate >= timePerFrame)
-		{	
-			timeSiceLastUpdate -= timePerFrame;
+		{	timeSiceLastUpdate -= timePerFrame;
 			processEvents();
 			update(timePerFrame);
 		}
@@ -61,6 +68,8 @@ void Game::update(sf::Time deltaTime)
 {
 	const float movmentSpeed = 400;
 	sf::Vector2f movment(0.f,0.f);
+
+
 	float x = deltaTime.asSeconds();
 
 	if (isMovingUp == true)
@@ -74,6 +83,7 @@ void Game::update(sf::Time deltaTime)
 
 	
 	mPlayer.move(movment*x);
+	updateShipView();
 }
 
 void Game::render()
@@ -93,4 +103,13 @@ void Game::handlerPlayerInput(sf::Keyboard::Key key,bool isPressed)
 		isMovingLeft = isPressed;
 	else if (key == sf::Keyboard::D || key == sf::Keyboard::Right)
 		isMovingRight = isPressed;
+}
+
+void Game::updateShipView()
+{
+	if (isMovingLeft && !isMovingRight)
+		mPlayer.setTexture(mTextureLeft);
+	else if (!isMovingLeft && isMovingRight)
+		mPlayer.setTexture(mTextureRight);
+
 }
