@@ -1,2 +1,3 @@
 ﻿  Game.cpp
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\Game.cpp(49,32): warning C4305: 'initializing': truncation from 'double' to 'float'
   Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe

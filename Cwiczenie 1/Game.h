@@ -10,9 +10,14 @@ private:
 	void processEvents();
 	void update();
 	void render();
+	void handlerPlayerInput(sf::Keyboard::Key,bool);
 
 private:
 	sf::RenderWindow mWindow;
 	sf::CircleShape mPlayer;
+	bool isMovingUp;
+	bool isMovinDown;
+	bool isMovingLeft;
+	bool isMovingRight;
 
 };
