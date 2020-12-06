@@ -1,13 +1,18 @@
 #include "Game.h"
 
 Game::Game()
-	: mWindow(sf::VideoMode(640, 480), "SFML Application")
+	: mWindow(sf::VideoMode(800, 600), "SFML Application")
 	, mPlayer()
-	
+	, mTexture()
 {
-	mPlayer.setRadius(40.f);
+	if (!mTexture.loadFromFile("Media/Textures/Eagle.png"))
+	{
+
+	}
+	mTexture.setSmooth(true);
+	mPlayer.setTexture(mTexture);
+	mPlayer.setScale(0.4, 0.4);
 	mPlayer.setPosition(100.f, 100.f);
-	mPlayer.setFillColor(sf::Color::Cyan);
 	isMovingUp = false;
 	isMovinDown = false;
 	isMovingLeft = false;
@@ -16,10 +21,18 @@ Game::Game()
 
 void Game::run()
 {
+	sf::Clock clock;
+	sf::Time timeSiceLastUpdate = sf::Time::Zero;
 	while (mWindow.isOpen())
 	{
 		processEvents();
-		update();
+		timeSiceLastUpdate += clock.restart();
+		if (timeSiceLastUpdate >= timePerFrame)
+		{	
+			timeSiceLastUpdate -= timePerFrame;
+			processEvents();
+			update(timePerFrame);
+		}
 		render();
 	}
 }
@@ -44,10 +57,12 @@ void Game::processEvents()
 	}
 }
 
-void Game::update()
+void Game::update(sf::Time deltaTime)
 {
-	const float movmentSpeed = 0.3;
+	const float movmentSpeed = 400;
 	sf::Vector2f movment(0.f,0.f);
+	float x = deltaTime.asSeconds();
+
 	if (isMovingUp == true)
 		movment.y -= movmentSpeed;
 	if (isMovinDown == true)
@@ -57,7 +72,8 @@ void Game::update()
 	if (isMovingRight == true)
 		movment.x += movmentSpeed;
 
-	mPlayer.move(movment);
+	
+	mPlayer.move(movment*x);
 }
 
 void Game::render()
