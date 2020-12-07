@@ -1,6 +1,6 @@
-#include <SFML/Graphics.hpp>
-
 #pragma once
+#include <SFML/Graphics.hpp>
+#include "NamespaceTexture.h"
 class Game
 {
 public:
@@ -16,9 +16,7 @@ private:
 private:
 	sf::RenderWindow mWindow;
 	sf::Sprite mPlayer;
-	sf::Texture mTexture;
-	sf::Texture mTextureLeft;
-	sf::Texture mTextureRight;
+	Textures::TextureHolder textureHolder;
 	const sf::Time timePerFrame = sf::seconds(1.f / 60.f);
 	bool isMovingUp;
 	bool isMovinDown;

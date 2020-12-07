@@ -1,24 +1,20 @@
 #include "Game.h"
+#include <cassert>
+#include "NamespaceTexture.h"
+
 
 Game::Game()
 	: mWindow(sf::VideoMode(800, 600), "SFML Application")
 	, mPlayer()
-	, mTexture()
+	, textureHolder()
 {
-	if (!mTexture.loadFromFile("Media/Textures/eagle.png"))
-	{
-
-	}
-	if (!mTextureLeft.loadFromFile("Media/Textures/eagle_left.png"))
-	{
-
-	}
-	if (!mTextureRight.loadFromFile("Media/Textures/eagle_right.png"))
-	{
-
-	}
-	mTexture.setSmooth(true);
-	mPlayer.setTexture(mTexture);
+	
+	printf("Rozpoczeto ladowanie gry");
+	textureHolder.load(Textures::Airplane ,"Media/Textures/eagle.png");
+	textureHolder.load(Textures::AirplaneLeft, "Media/Textures/eagle_left.png");
+	textureHolder.load(Textures::AirplaneRight, "Media/Textures/eagle_right.png");
+	//mTexture.setSmooth(true);
+	mPlayer.setTexture(textureHolder.get(Textures::Airplane));
 	mPlayer.setScale(0.4, 0.4);
 	mPlayer.setPosition(100.f, 100.f);
 	isMovingUp = false;
@@ -108,8 +104,8 @@ void Game::handlerPlayerInput(sf::Keyboard::Key key,bool isPressed)
 void Game::updateShipView()
 {
 	if (isMovingLeft && !isMovingRight)
-		mPlayer.setTexture(mTextureLeft);
+		mPlayer.setTexture(textureHolder.get(Textures::AirplaneLeft));
 	else if (!isMovingLeft && isMovingRight)
-		mPlayer.setTexture(mTextureRight);
+		mPlayer.setTexture(textureHolder.get(Textures::AirplaneRight));
 
 }
