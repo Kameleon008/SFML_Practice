@@ -21,7 +21,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="NamespaceTexture.cpp">
+    <ClCompile Include="TexttureHolder.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,8 +29,16 @@
     <ClInclude Include="Game.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="NamespaceTexture.h">
+    <ClInclude Include="TexttureHolder.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="ResourceHolder.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHolder.inl">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
   </ItemGroup>
 </Project>

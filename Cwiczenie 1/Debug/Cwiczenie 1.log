@@ -1,5 +1,6 @@
 ﻿  Game.cpp
-K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\Game.cpp(18,27): warning C4305: 'argument': truncation from 'double' to 'float'
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\Game.cpp(19,27): warning C4305: 'argument': truncation from 'double' to 'float'
   main.cpp
+  TexttureHolder.cpp
   Generating Code...
   Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe
