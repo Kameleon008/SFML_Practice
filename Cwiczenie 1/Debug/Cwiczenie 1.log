@@ -1,4 +1,9 @@
-﻿  World.cpp
+﻿  Aircraft.cpp
+  Enity.cpp
+  Game.cpp
+  SceneNode.cpp
+  SpriteNode.cpp
+  World.cpp
 K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(12,39): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
           with
           [
@@ -14,4 +19,7 @@ K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(73,44): warning C4
           [
               T=int
           ]
+  main.cpp
+  Generating Code...
+  LINK : K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe not found or not built by the last incremental link; performing full link
   Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe
