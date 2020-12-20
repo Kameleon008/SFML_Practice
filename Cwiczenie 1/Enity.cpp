@@ -1,5 +1,6 @@
 #include "Enity.hpp"
 #include <assert.h>
+#include <SFML/Graphics.hpp>
 
 void Enity::setVelocity(sf::Vector2f velocityVector)
 {
@@ -17,3 +18,7 @@ sf::Vector2f  Enity::getVelocity() const
 	return mVelocity;
 }
 
+void Enity::updateCurrent(sf::Time dt)
+{
+	move(mVelocity * dt.asSeconds());
+}

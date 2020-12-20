@@ -11,13 +11,9 @@ namespace Resources
 {
 	enum TextureID 
 	{ 
-		Landscape, 
-		Airplane, 
-		AirplaneLeft, 
-		AirplaneRight,
-		Missle, 
 		Eagle, 
-		Raptor
+		Raptor,
+		Landscape
 	};
 
 	//typedef ResourceHolder<sf::Texture, Resources::ID> TextureHolder;

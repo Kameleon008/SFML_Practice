@@ -1,4 +1,17 @@
-﻿  Aircraft.cpp
-  World.cpp
-  Generating Code...
+﻿  World.cpp
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(12,39): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(73,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(73,44): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
   Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe
