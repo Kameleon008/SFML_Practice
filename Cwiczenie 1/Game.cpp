@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <cassert>
 #include "ResourceHolder.h"
+#include "Enity.hpp"
 
 using namespace Resources;
 
@@ -11,6 +12,7 @@ Game::Game()
 	, textureHolder()
 	
 {
+
 	//assert(false);
 	printf("Rozpoczeto ladowanie gry\n");
 	textureHolder.load(Airplane ,"Media/Textures/eagle.png");
