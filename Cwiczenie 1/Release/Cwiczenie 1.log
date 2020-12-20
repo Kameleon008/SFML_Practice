@@ -1,0 +1,8 @@
+﻿  Game.cpp
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\Game.cpp(24,27): warning C4305: 'argument': truncation from 'double' to 'float'
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 80 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Release\Cwiczenie 1.exe

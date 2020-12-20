@@ -1,3 +1,17 @@
-﻿  Game.cpp
-K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\Game.cpp(14,27): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  World.cpp
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(12,39): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(73,62): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Cwiczenie 1\World.cpp(73,44): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
   Cwiczenie 1.vcxproj -> K:\Desktop\SFML\Cwiczenie 1\Cwiczenie 1\Debug\Cwiczenie 1.exe

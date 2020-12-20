@@ -1,26 +1,25 @@
-#include <SFML/Graphics.hpp>
-
 #pragma once
+#include <SFML/Graphics.hpp>
+#include "ResourceHolder.h"
+#include "World.h"
+
 class Game
 {
 public:
-	Game();
-	void run();
+						Game();
+	void				run();
 private:
-	void processEvents();
-	void update(sf::Time);
-	void render();
-	void handlerPlayerInput(sf::Keyboard::Key,bool);
+	void				processEvents();
+	void				update(sf::Time);
+	void				render();
+	void				handlerPlayerInput(sf::Keyboard::Key,bool);
 
 private:
-	sf::RenderWindow mWindow;
-	sf::Sprite mPlayer;
-	sf::Texture mTexture;
-	const sf::Time timePerFrame = sf::seconds(1.f / 60.f);
-	bool isMovingUp;
-	bool isMovinDown;
-	bool isMovingLeft;
-	bool isMovingRight;
+	sf::RenderWindow	mWindow;
+	World				mWorld;
+
+	const sf::Time		timePerFrame = sf::seconds(1.f / 60.f);
+	
 	
 
 };
