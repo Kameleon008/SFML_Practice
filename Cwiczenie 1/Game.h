@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "TexttureHolder.h"
+//#include "TexttureHolder.h"
 #include "ResourceHolder.h"
 class Game
 {
@@ -17,8 +17,8 @@ private:
 private:
 	sf::RenderWindow mWindow;
 	sf::Sprite mPlayer;
-	ResourceHolder<sf::Texture, Resources::ID> textureHolder;
-	//TextureHolder textureHolder;
+	sf::Sprite mBakground;
+	TextureHolder textureHolder;
 	const sf::Time timePerFrame = sf::seconds(1.f / 60.f);
 	bool isMovingUp;
 	bool isMovinDown;

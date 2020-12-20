@@ -125,14 +125,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Enity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TexttureHolder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Enity.hpp" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="ResourceHolder.h" />
-    <ClInclude Include="TexttureHolder.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl" />
